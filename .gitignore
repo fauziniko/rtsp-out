@@ -1,0 +1,36 @@
+# Node modules
+/node_modules/
+
+# Log files
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Dependency directories
+/bower_components/
+/jspm_packages/
+
+# Build directories
+/dist/
+/build/
+/out/
+
+# .env files for local environment variables
+.env
+
+# Docker files (Jika Anda ingin mengecualikan file Docker terkait build)
+.docker/
+docker-compose.override.yml
+
+# Sertifikat SSL untuk testing lokal (jika ada)
+ssl/
+
+# MacOS specific
+.DS_Store
+
+# IDE files (Jika menggunakan VSCode atau IDE lainnya)
+.vscode/
+.idea/
+
+# npm package-lock file
+package-lock.json
