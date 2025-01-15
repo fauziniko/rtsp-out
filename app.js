@@ -1,16 +1,10 @@
 const express = require('express');
-const fs = require('fs');
-const https = require('https');
 const http = require('http');
 const path = require('path');
+const fs = require('fs');
 const ffmpeg = require('fluent-ffmpeg'); // Modul untuk menggunakan FFmpeg
 
 const app = express();
-
-// Sertifikat SSL untuk HTTPS
-const privateKey = fs.readFileSync('ssl/private.key', 'utf8');
-const certificate = fs.readFileSync('ssl/certificate.crt', 'utf8');
-const credentials = { key: privateKey, cert: certificate };
 
 // API untuk mengeluarkan video
 app.get('/video', (req, res) => {
@@ -38,9 +32,9 @@ app.get('/video', (req, res) => {
     .pipe(res, { end: true });
 });
 
-// Menjalankan server HTTPS
-const httpsServer = https.createServer(credentials, app);
+// Menjalankan server HTTP
+const httpServer = http.createServer(app);
 
-httpsServer.listen(3000, () => {
-  console.log('HTTPS Server running on https://localhost:3000');
+httpServer.listen(3000, () => {
+  console.log('HTTP Server running on http://localhost:3000');
 });

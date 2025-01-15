@@ -12,7 +12,7 @@ WORKDIR /usr/src/app
 # Menyalin package.json dan package-lock.json ke dalam container
 COPY package*.json ./
 
-# Menginstal dependensi aplikasi Node.js
+# Menginstal dependensi aplikasi Node.js termasuk fluent-ffmpeg
 RUN npm install
 
 # Menyalin seluruh kode aplikasi ke dalam container
