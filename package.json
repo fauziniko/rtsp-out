@@ -1,0 +1,12 @@
+{
+  "name": "rtsp-stream-server",
+  "version": "1.0.0",
+  "description": "An Express.js app to stream video as RTSP using FFmpeg",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
